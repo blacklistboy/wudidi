@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>sorry wudidi</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+    window.onload = function() {
+        function $(id) {
+            return document.getElementById(id);
+        }
+        $("box_close").onclick = function() {
+            $("mask").style.display = "none";
+            $("box").style.display = "none";
+        }
+        var lists = document.getElementsByTagName("li");
+        for (i = 0; i < lists.length; i++) {
+            lists[i].index = i;
+            lists[i].onclick = function() {
+                for (j = 0; j < lists.length; j++) {
+                    lists[j].style.textDecoration = "none";
+                }
+                this.style.textDecoration = "underline";
+                $("right_con").style.backgroundImage = "url(images/0" + (this.index + 1) + ".jpg)";
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 0730预告start -->
+    <div id="mask"></div>
+    <div id="box">
+        <span id="box_close">×</span>
+        <span class="box-con">报告最可爱的无敌！<br>我请求离开黑名单！</span>
+        <img src="images/leiliumanmian.jpg" class="box-img">
+    </div>
+    <!-- 0730预告end -->
+    <!-- 顶部通栏start -->
+    <div class="top-banner">
+        <div class="top-w"></div>
+    </div>
+    <!-- 顶部通栏end -->
+    <!-- 主体内容start -->
+    <div class="content">
+        <div class="left-con">
+            <ul>
+                <li class="li-1" id="li_1"><a href="javascript:;" id="a_1">NO.1</a></li>
+                <li class="li-2" id="li_2"><a href="javascript:;" id="a_2">NO.2</a></li>
+                <li class="li-3" id="li_3"><a href="javascript:;" id="a_3">NO.3</a></li>
+                <li class="li-4" id="li_4"><a href="javascript:;" id="a_4">NO.4</a></li>
+                <li class="li-5" id="li_5"><a href="javascript:;" id="a_5">NO.5</a></li>
+                <li class="li-6" id="li_6"><a href="javascript:;" id="a_6">NO.6</a></li>
+                <li class="li-7" id="li_7"><a href="javascript:;" id="a_7">NO.7</a></li>
+                <li class="li-8" id="li_8"><a href="javascript:;" id="a_8">NO.8</a></li>
+                <li class="li-9" id="li_9"><a href="javascript:;" id="a_9">NO.9</a></li>
+                <li class="li-x" id="li_x"><a href="javascript:;" id="a_x">NO.X</a></li>
+            </ul>
+            <img src="images/ewm.jpg" alt="" class="ewm">
+        </div>
+        <div class="right-con" id="right_con"></div>
+    </div>
+    <!-- 主体内容end -->
+</body>
+
+</html>
